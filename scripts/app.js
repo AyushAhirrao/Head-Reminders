@@ -1,11 +1,9 @@
-let toggleState = true;
-
 // render todos 
 function renderTodos() {
   todos.map((element, index) => {
     document.getElementById('list').innerHTML += `
       <li>
-        <div class="list-item" id="todo-item${index}" onclick="toggleTodo(${index});">
+        <div class="list-item" id="todo-item${index}" toggleState="false" onclick="toggleTodo(${index});">
 
           <div class="checkBox">
             <input type="checkbox" id="checkbox${index}" onclick="checkCheckBox(${index});">

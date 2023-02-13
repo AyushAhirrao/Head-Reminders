@@ -1,4 +1,18 @@
 function toggleTodo(index) {
+
+    // get the list item div
+    let todoItem = document.getElementById(`todo-item${index}`);
+
+    // get the value of toggleState
+    let toggleState = todoItem.getAttribute('toggleState');
+
+    // typecase the toggleState to boolean
+    if (toggleState === "true") {
+        toggleState = true;
+    } else {
+        toggleState = false;
+    }
+
     // collapse
     if (toggleState) {
 
@@ -24,28 +38,26 @@ function toggleTodo(index) {
         document.getElementById(`list-item${index}`).style.display = `block`
     }
 
-    updateToggleState();
-}
+    // update the toggleState value
+    todoItem.setAttribute('toggleState', !toggleState);
 
-function updateToggleState() {
-    toggleState = !toggleState;
 }
-
 
 async function checkCheckBox(index) {
-
-    // call toggleTodo again to not to toggle the description
-    toggleTodo(index);
 
     // get the checkbox
     let checkBox = document.getElementById(`checkbox${index}`)
 
     // if checkbox is checked
     if (checkBox.checked) {
+        // get todoItem
         let todoItem = document.getElementById(`todo-item${index}`);
+
+        // animation
         todoItem.style.animationName = 'shake';
         todoItem.style.animationDuration = '3s';
 
+        // remove the todo after 800 milliseconds
         setTimeout(() => {
             todoItem.remove();
         }, 800);

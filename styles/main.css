@@ -36,17 +36,28 @@
 
 }
 
-.todo-description {
-    display: none;
-}
-
 .collapse-btn {
     display: none;
 }
 
-.todo-description-truncated {
-    transition: 2s;
+.non-truncated {
+    display: none;
 }
+
 .todo-description {
     transition: 2s;
+}
+
+.todo-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.expand-btn {
+    width: 1rem;
+}
+
+.collapse-btn {
+    width: 1rem;
 }

@@ -3,8 +3,8 @@ function toggleTodo(index) {
     if (toggleState) {
 
         // heading
-        document.getElementById(`expandedHeading${index}`).style.display = `block`
-        document.getElementById(`truncatedHeading${index}`).style.display = `none`
+        document.getElementById(`expandedHeading${index}`).style.display = `none`
+        document.getElementById(`truncatedHeading${index}`).style.display = `block`
 
 
         // description
@@ -15,8 +15,8 @@ function toggleTodo(index) {
     else {
 
         // heading
-        document.getElementById(`expandedHeading${index}`).style.display = `none`
-        document.getElementById(`truncatedHeading${index}`).style.display = `block`
+        document.getElementById(`expandedHeading${index}`).style.display = `block`
+        document.getElementById(`truncatedHeading${index}`).style.display = `none`
 
 
         // description
@@ -29,4 +29,26 @@ function toggleTodo(index) {
 
 function updateToggleState() {
     toggleState = !toggleState;
+}
+
+
+async function checkCheckBox(index) {
+
+    // call toggleTodo again to not to toggle the description
+    toggleTodo(index);
+
+    // get the checkbox
+    let checkBox = document.getElementById(`checkbox${index}`)
+
+    // if checkbox is checked
+    if (checkBox.checked) {
+        let todoItem = document.getElementById(`todo-item${index}`);
+        todoItem.style.animationName = 'shake';
+        todoItem.style.animationDuration = '3s';
+
+        setTimeout(() => {
+            todoItem.remove();
+        }, 800);
+
+    }
 }

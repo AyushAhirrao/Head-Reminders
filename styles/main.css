@@ -44,14 +44,23 @@
     display: none;
 }
 
+.todo-title {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
 .todo-description {
-    transition: 2s;
+    /* transition: 2s; */
 }
 
 .todo-date {
+    margin-top: 0.5rem;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    font-size: 0.7rem;
 }
 
 .expand-btn {
@@ -60,4 +69,11 @@
 
 .collapse-btn {
     width: 1rem;
+}
+
+.checkBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }

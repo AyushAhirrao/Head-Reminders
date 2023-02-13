@@ -45,6 +45,9 @@ function toggleTodo(index) {
 
 async function checkCheckBox(index) {
 
+    // reToggle the toggleTodo
+    toggleTodo(index);
+
     // get the checkbox
     let checkBox = document.getElementById(`checkbox${index}`)
 

@@ -33,8 +33,20 @@
     margin: 1rem;
     padding: 1rem;
     background-color: rgb(67, 67, 67);
+
 }
 
-.todo-description{
+.todo-description {
     display: none;
+}
+
+.collapse-btn {
+    display: none;
+}
+
+.todo-description-truncated {
+    transition: 2s;
+}
+.todo-description {
+    transition: 2s;
 }

@@ -1,5 +1,7 @@
 // todos
-let todos = "";
+let todos = [];
+
+let completedTodos = [];
 
 // todos 
 let data = [{
@@ -26,77 +28,8 @@ let data = [{
         "heading": "item5",
         "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
         "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
-    {
-        "heading": "item5",
-        "description": "hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world",
-        "date": "1/5/2023"
-    },
+    }
+
 ]
 
 localStorage.setItem('todos', JSON.stringify(data));

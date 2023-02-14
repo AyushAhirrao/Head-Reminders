@@ -23,10 +23,10 @@
     height: 75%;
     padding: 1rem;
     overflow-y: scroll;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
-#list-container ul {
+#list-container ul{
     list-style: none;
 }
 
@@ -77,4 +77,9 @@
     justify-content: flex-end;
     align-items: center;
 
+}
+
+
+#completed-todos-container{
+    padding-bottom: 2rem;
 }

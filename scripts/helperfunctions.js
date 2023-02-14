@@ -1,7 +1,4 @@
-function toggleTodo(index) {
-
-    // get the list item div
-    let todoItem = document.getElementById(`todo-item${index}`);
+function togglePendingTodos(todoItem, index) {
 
     // get the value of toggleState
     let toggleState = todoItem.getAttribute('toggleState');
@@ -43,16 +40,62 @@ function toggleTodo(index) {
 
 }
 
-async function checkCheckBox(index) {
+function toggleCompletedTodos(todoItem, index) {
+
+    // get the value of toggleState
+    let toggleState = todoItem.getAttribute('toggleState');
+
+    // typecase the toggleState to boolean
+    if (toggleState === "true") {
+        toggleState = true;
+    } else {
+        toggleState = false;
+    }
+
+    // collapse
+    if (toggleState) {
+
+        // heading
+        document.getElementById(`completed-expandedHeading${index}`).style.display = `none`
+        document.getElementById(`completed-truncatedHeading${index}`).style.display = `block`
+
+
+        // description
+        document.getElementById(`completed-list-item${index}-truncated`).style.display = `block`
+        document.getElementById(`completed-list-item${index}`).style.display = `none`
+    }
+    // expand
+    else {
+
+        // heading
+        document.getElementById(`completed-expandedHeading${index}`).style.display = `block`
+        document.getElementById(`completed-truncatedHeading${index}`).style.display = `none`
+
+
+        // description
+        document.getElementById(`completed-list-item${index}-truncated`).style.display = `none`
+        document.getElementById(`completed-list-item${index}`).style.display = `block`
+    }
+
+    // update the toggleState value
+    todoItem.setAttribute('toggleState', !toggleState);
+
+}
+
+async function handleCheckBox(todoItem, index) {
 
     // reToggle the toggleTodo
-    toggleTodo(index);
+    togglePendingTodos(todoItem, index);
 
     // get the checkbox
     let checkBox = document.getElementById(`checkbox${index}`)
 
     // if checkbox is checked
     if (checkBox.checked) {
+
+        completedTodos.push(todos[index]);
+        todos.splice(index, 1);
+
         // get todoItem
         let todoItem = document.getElementById(`todo-item${index}`);
 
@@ -62,7 +105,7 @@ async function checkCheckBox(index) {
 
         // remove the todo after 800 milliseconds
         setTimeout(() => {
-            todoItem.remove();
+            renderTodos();
         }, 800);
 
     }

@@ -42,7 +42,7 @@ function renderPendingTodos() {
             <p class="todo-description truncated" id="list-item${index}-truncated">${(element.description).length>50?(element.description).substring(0,50)+'...':(element.description)}</p>
             <p class="todo-description non-truncated" id="list-item${index}">${element.description}</p>
 
-            <div class="todo-date">${element.date}</div>
+            <div class="todo-date"><i>${element.date}</i></div>
           </div>
         </li> 
       `);
@@ -66,7 +66,7 @@ function renderCompletedTodos() {
             <p class="todo-description truncated" id="completed-list-item${index}-truncated">${(element.description).length>50?(element.description).substring(0,50)+'...':(element.description)}</p>
             <p class="todo-description non-truncated" id="completed-list-item${index}">${element.description}</p>
 
-            <div class="todo-date">${element.date}</div>
+            <div class="todo-date"><i>${element.date} - ${element.completedDate}</i></div>
           </div>
         </li> 
       `);

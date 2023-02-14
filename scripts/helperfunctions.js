@@ -93,7 +93,21 @@ async function handleCheckBox(todoItem, index) {
     // if checkbox is checked
     if (checkBox.checked) {
 
+        // get today's date
+        let currentDate = new Date();
+
+        // format date
+        currentDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+
+        
+        // add new property for the object
+        pendingTodos[index].completedDate = currentDate;
+
+
+        // move the todo to completedTodos 
         completedTodos.push(pendingTodos[index]);
+
+        // remove the todo from pending todos list and move it to the completed todos
         pendingTodos.splice(index, 1);
 
         // get todoItem

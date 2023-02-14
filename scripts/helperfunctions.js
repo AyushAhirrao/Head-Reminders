@@ -93,13 +93,9 @@ async function handleCheckBox(todoItem, index) {
     // if checkbox is checked
     if (checkBox.checked) {
 
-        // get today's date
-        let currentDate = new Date();
+        // get today's data
+        let currentDate = getTodaysDate();
 
-        // format date
-        currentDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-
-        
         // add new property for the object
         pendingTodos[index].completedDate = currentDate;
 
@@ -109,6 +105,9 @@ async function handleCheckBox(todoItem, index) {
 
         // remove the todo from pending todos list and move it to the completed todos
         pendingTodos.splice(index, 1);
+
+        // update new list
+        updateLocalStorage();
 
         // get todoItem
         let todoItem = document.getElementById(`todo-item${index}`);
@@ -123,4 +122,24 @@ async function handleCheckBox(todoItem, index) {
         }, 800);
 
     }
+}
+
+function getTodaysDate() {
+    // get today's date
+    let currentDate = new Date();
+
+    // format date
+    currentDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+
+    return currentDate;
+}
+
+function updateLocalStorage() {
+
+    // pending todos
+    localStorage.setItem('pending-todos', JSON.stringify(pendingTodos));
+
+    // completed todos 
+    localStorage.setItem('pending-todos', JSON.stringify(completedTodos));
+
 }

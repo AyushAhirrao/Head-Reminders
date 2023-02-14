@@ -69,3 +69,56 @@
     margin: 2rem;
     color: rgb(86, 86, 86);
 }
+
+#add-todo-input-container {
+    position: absolute;
+    /* width: 15%; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(42, 42, 42);
+    padding: 2rem 3rem;
+    border-radius: 8px;
+}
+
+#add-todo-input-container div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+#add-todo-input-container label {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(105, 105, 105);
+    margin-bottom: 15px;
+}
+
+#add-todo-input-container input {
+    outline: none;
+    width: 12rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgb(51, 51, 51);
+
+    font-size: 18px;
+    color: rgb(105, 105, 105);
+    font-weight: 700;
+}
+
+#submit-todo-btn-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#submit-todo-btn {
+
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(57, 57, 57);
+    color: rgb(105, 105, 105);
+    font-weight: 700;
+}

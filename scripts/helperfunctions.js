@@ -140,6 +140,6 @@ function updateLocalStorage() {
     localStorage.setItem('pending-todos', JSON.stringify(pendingTodos));
 
     // completed todos 
-    localStorage.setItem('pending-todos', JSON.stringify(completedTodos));
+    localStorage.setItem('completed-todos', JSON.stringify(completedTodos));
 
 }

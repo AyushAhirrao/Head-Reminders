@@ -122,3 +122,18 @@
     color: rgb(105, 105, 105);
     font-weight: 700;
 }
+
+#title-bar {
+    display: flex;
+    align-items: center;
+}
+
+#clear-completed-todos-btn-container {
+    margin: 0 1rem;
+}
+
+#clear-completed-todos-btn {
+    padding: 0.2rem 1rem;
+    border: none;
+    border-radius: 2px;
+}

@@ -18,6 +18,7 @@
   <script defer src="scripts/constants.js"></script>
   <script defer src="scripts/render.js"></script>
   <script defer src="scripts/addTodo.js"></script>
+  <script defer src="scripts/clearTodos.js"></script>
   <script defer src="scripts/helperfunctions.js"></script>
 
 </head>
@@ -25,12 +26,12 @@
 <body>
   <div class="container flex-center">
     <div class="main">
+
+      <!-- todos dashboard and stats -->
       <div id="dashboard">
         <div id="search"></div>
         <div id="stats">
           <div id="stat1">stat1</div>
-          <div id="stat2">stat2</div>
-          <div id="stat3">stat3</div>
         </div>
 
         <div id="add-todo-container">
@@ -38,13 +39,21 @@
         </div>
       </div>
       <div id="list-container">
-        <h2>Pending</h2>
+        <h2>Pending-Todos</h2>
         <div id="pending-todos-container">
           <ul id="pending-todos"></ul>
         </div>
 
         <div id="completed-todos-container">
-          <h2>Completed</h2>
+          <div id="title-bar">
+            <div id="completed-todos-heading">
+              <h2>Completed-Todos</h2>
+            </div>
+
+            <div id="clear-completed-todos-btn-container">
+              <button id="clear-completed-todos-btn">clear</button>
+            </div>
+          </div>
           <ul id="completed-todos"></ul>
         </div>
       </div>

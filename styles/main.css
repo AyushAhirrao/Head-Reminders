@@ -8,7 +8,6 @@
     background-color: rgb(53, 53, 53);
     color: white;
     width: 100%;
-    /* max-width: 40rem; */
     height: 95vh;
 }
 
@@ -19,26 +18,21 @@
 }
 
 #list-container {
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(36, 36, 36);
     height: 75%;
     padding: 1rem;
     overflow-y: scroll;
     padding-bottom: 2rem;
 }
 
-#list-container ul{
+#list-container ul {
     list-style: none;
 }
 
 .list-item {
     margin: 1rem;
     padding: 1rem;
-    background-color: rgb(67, 67, 67);
-
-}
-
-.collapse-btn {
-    display: none;
+    background-color: rgb(56, 56, 56);
 }
 
 .non-truncated {
@@ -48,10 +42,6 @@
 .todo-title {
     font-size: 1.3rem;
     margin: 0.5rem 0;
-}
-
-.todo-description {
-    /* transition: 2s; */
 }
 
 .todo-date {
@@ -64,22 +54,18 @@
     font-size: 0.7rem;
 }
 
-.expand-btn {
-    width: 1rem;
-}
-
-.collapse-btn {
-    width: 1rem;
-}
-
-.checkBox{
+.checkBox {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 
-
-#completed-todos-container{
+#completed-todos-container {
+    margin: 2rem 0;
     padding-bottom: 2rem;
+}
+
+.empty-todos {
+    margin: 2rem;
+    color: rgb(86, 86, 86);
 }

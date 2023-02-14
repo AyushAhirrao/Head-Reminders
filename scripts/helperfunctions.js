@@ -93,8 +93,8 @@ async function handleCheckBox(todoItem, index) {
     // if checkbox is checked
     if (checkBox.checked) {
 
-        completedTodos.push(todos[index]);
-        todos.splice(index, 1);
+        completedTodos.push(pendingTodos[index]);
+        pendingTodos.splice(index, 1);
 
         // get todoItem
         let todoItem = document.getElementById(`todo-item${index}`);

@@ -1,11 +1,25 @@
 // render all todos 
-function renderTodos() {
+async function renderTodos() {
 
-  // render pending todos
-  renderPendingTodos();
+  // handle empty todos
+  if (pendingTodos == null || pendingTodos == [] || pendingTodos == undefined || pendingTodos == '') {
+    document.getElementById('pending-todos').innerHTML = `<div class="empty-todos flex-center"><i>No Todos</i></div>`
+  } 
+  // handle pending todos
+  else {
+    // render pending todos
+    renderPendingTodos();
+  }
 
-  // completed todos
-  renderCompletedTodos();
+  // handle empty todos
+  if (completedTodos == null || completedTodos == [] || completedTodos == undefined || completedTodos == '') {
+    document.getElementById('completed-todos').innerHTML = `<div class="empty-todos flex-center"><i>No Todos</i></div>`
+  }
+  // handle completed todos
+  else {
+    // render completed todos
+    renderCompletedTodos();
+  }
 }
 
 // for rendering pending todos
@@ -13,7 +27,7 @@ function renderPendingTodos() {
 
   document.getElementById('pending-todos').innerHTML = `
   ${
-    todos.map((element, index) => {
+    pendingTodos.map((element, index) => {
       return (`
         <li>
           <div class="list-item" id="todo-item${index}" toggleState="false" onclick="togglePendingTodos(this, ${index});">
